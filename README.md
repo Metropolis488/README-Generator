@@ -47,7 +47,7 @@ SOFTWARE.;
 Nope - improve at will!
 
 ## Tests
-No - if a well-formed readme is generated, it worked!
+No - if a well formed README file is created, it worked!
 
 ## Questions
 You can see all my repositories at: https://github.com/Metropolis488.
