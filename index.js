@@ -175,6 +175,6 @@ async function fileCreator() {
     Email me: ${email}`
 
 
-    let fileName = await title.toUpperCase().split(" ").join("-");
-    await fs.writeFile(`${fileName}.md`, newRM, () => {});
+    // let fileName = await title.toUpperCase().split(" ").join("-");
+    await fs.writeFile(`README.md`, newRM, () => {});
 }
