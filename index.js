@@ -139,40 +139,40 @@ async function fileCreator() {
         OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.`
     }
     
-    let newRM = `
-    ![Image](https://img.shields.io/badge/license-${icon}-blue.svg)
-    
-    # Title: ${title}
+    let newRM = 
+`![Image](https://img.shields.io/badge/license-${icon}-blue.svg)
 
-    ## Description
-    ${description}
+# Title: ${title}
 
-    ## Table of Contents
-    ### Installation
-    ### Usage
-    ### License
-    ### Contributing
-    ### Tests 
-    ### Questions
-   
-    ### Installation
-    ${instructions}
+## Description
+${description}
 
-    ### Usage
-    ${usage}
-    
-    ### License
-    ${licPrint};
+## Table of Contents
+### Installation
+### Usage
+### License
+### Contributing
+### Tests 
+### Questions
 
-    ### Contributing
-    ${contributions}
+### Installation
+${instructions}
 
-    ### Tests
-    ${test}
+### Usage
+${usage}
 
-    ### Questions
-    You can see all my repositories at ${github}.
-    Email me: ${email}`
+### License
+${licPrint};
+
+### Contributing
+${contributions}
+
+### Tests
+${test}
+
+### Questions
+You can see all my repositories at: ${github}.
+Email me: ${email}`
 
 
     // let fileName = await title.toUpperCase().split(" ").join("-");

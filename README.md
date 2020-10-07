@@ -1,27 +1,26 @@
+![Image](https://img.shields.io/badge/license-MIT-blue.svg)
 
-    ![Image](https://img.shields.io/badge/license-MIT-blue.svg)
-    
-    # Title: Readme Generator
+# Title: Readme File Generator
 
-    ## Description
-    This is a CLI application to allow users to create a readme file by responding to 10 prompts in their command line.
+## Description
+This is a CLI application to allow users to create a readme file by responding to 10 prompts in their command line.
 
-    ## Table of Contents
-    ### Installation
-    ### Usage
-    ### License
-    ### Contributing
-    ### Tests 
-    ### Questions
-   
-    ### Installation
-    Users will need to install NODE.js to use this application.
+## Table of Contents
+### Installation
+### Usage
+### License
+### Contributing
+### Tests 
+### Questions
 
-    ### Usage
-    Available to anyone that would like to use an application to create a readme file.
-    
-    ### License
-    MIT License
+### Installation
+User will need to install NODE.js to use this application.
+
+### Usage
+Available to anyone that would like to use an application to create a readme file.
+
+### License
+MIT License
         
         Copyright (c) 2020 Matt Steiner
         
@@ -43,12 +42,12 @@
         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
         SOFTWARE.;
 
-    ### Contributing
-    Nope - improve at will.
+### Contributing
+Nope.
 
-    ### Tests
-    No - if a well-formed readme is generated, it worked!
+### Tests
+No - if a well-formed readme is generated, it worked!
 
-    ### Questions
-    You can see all my repositories at https://github.com/Metropolis488.
-    Email me: Metropolis.4488@gmail.com
+### Questions
+You can see all my repositories at: https://github.com/Metropolis488.
+Email me: Metropolis.4488@gmail.com
