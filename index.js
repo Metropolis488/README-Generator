@@ -156,22 +156,22 @@ ${description}
 ### Questions
 
 
-### Installation
+## Installation
 ${instructions}
 
-### Usage
+## Usage
 ${usage}
 
-### License
+## License
 ${licPrint};
 
-### Contributing
+## Contributing
 ${contributions}
 
-### Tests
+## Tests
 ${test}
 
-### Questions
+## Questions
 You can see all my repositories at: ${github}.
 
 Email me: ${email}`
