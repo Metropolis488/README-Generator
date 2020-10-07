@@ -16,7 +16,7 @@ async function fileCreator() {
             name: "title"
         },
         {
-            message: "Provided a description of the project",
+            message: "Provided a description of the project.",
             name: "description"
         },
         {
@@ -36,21 +36,23 @@ async function fileCreator() {
             name: "test"
         },
         {
-            message: "Please provide a link your GitHub Profile",
+            message: "Please provide a link your GitHub Profile.",
             name: "github"
         },
         {
-            message: "Please provide an email address contributors can use to contact you",
+            message: "Please provide an email address contributors can use to contact you.",
             name: "email"
         },
         {
-            message: "Please select a license for your project - please enter 'MIT', 'BSD2' or 'BSD3'",
+            message: "Please select a license for your project - please enter 'MIT', 'BSD2' or 'BSD3'.",
             name: "license"
         },
     ]);
     var licType = await license.toLowerCase();
     var licPrint;
+    var icon;
     if (licType === "mit") {
+        icon = "MIT"
         licPrint = 
         `MIT License
         
@@ -75,9 +77,11 @@ async function fileCreator() {
         SOFTWARE.`
     }
     if (licType === "bsd2") {
-        licPrint = `BSD 2-Clause License
-        Copyright ${currentYear} ${user}
+        icon = "BSD-2Clause"
+        licPrint = 
+        `BSD 2-Clause License
         
+        Copyright ${currentYear} ${user}        
         All rights reserved.
         
         Redistribution and use in source and binary forms, with or without
@@ -102,7 +106,9 @@ async function fileCreator() {
         OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.`
     }
     if (licType === "bsd3") {
-        licPrint = `BSD 3-Clause License
+        icon = "BSD-3Clause"
+        licPrint = 
+        `BSD 3-Clause License
 
         Copyright ${currentYear} ${user}
         All rights reserved.
@@ -132,39 +138,42 @@ async function fileCreator() {
         OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
         OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.`
     }
-    console.log(licPrint);
-    let newRM = `# Project Name: ${title}
+    
+    let newRM = `
+    ![Image](https://img.shields.io/badge/license-${icon}-blue.svg)
+    
+    # Title: ${title}
 
-    ## Table of Contents
-    ### Project Description
-    ### Installation Instructions
-    ### Intended Usage
-    ### How to Contribute
-    ### How to Test
-    ### Questions?
-    ### License
-   
-    ### Project Description
+    ## Description
     ${description}
 
-    ### Installation Instructions
+    ## Table of Contents
+    ### Installation
+    ### Usage
+    ### License
+    ### Contributing
+    ### Tests 
+    ### Questions
+   
+    ### Installation
     ${instructions}
 
-    ### Intended Usage
+    ### Usage
     ${usage}
+    
+    ### License
+    ${licPrint};
 
-    ### How to Contribute
+    ### Contributing
     ${contributions}
 
-    ### How to Test
+    ### Tests
     ${test}
 
-    ### Questions?
+    ### Questions
     You can see all my repositories at ${github}.
-    Email me: ${email}
+    Email me: ${email}`
 
-    ### License
-    ${licPrint}`;
 
     let fileName = await title.toUpperCase().split(" ").join("-");
     await fs.writeFile(`${fileName}.md`, newRM, () => {});
